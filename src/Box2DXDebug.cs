@@ -43,7 +43,9 @@ namespace Box2DX
 		[Conditional("DEBUG")]
 		public static void Assert(bool condition, string message, string detailMessage)
 		{
-			Debug.Assert(condition, message, detailMessage);
+			// Not compatible with PCL?
+			// Debug.Assert(condition, message, detailMessage);
+			Debug.Assert(condition, message);
 		}
 
 		public static void ThrowBox2DXException(String message)
